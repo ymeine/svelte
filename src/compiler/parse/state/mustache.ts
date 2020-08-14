@@ -38,7 +38,7 @@ export default function mustache(parser: Parser) {
 
 	parser.allow_whitespace();
 
-	// {/if}, {/each}, {/await} or {/key}
+	// {/if}, {/each}, {/await}, {/key} or {/slot}
 	if (parser.eat('/')) {
 		let block = parser.current();
 		let expected;
@@ -65,6 +65,8 @@ export default function mustache(parser: Parser) {
 			expected = 'await';
 		} else if (block.type === 'KeyBlock') {
 			expected = 'key';
+		} else if (block.type === 'SlotBlock') {
+			expected = 'slot';
 		} else {
 			parser.error({
 				code: 'unexpected-block-close',
@@ -225,10 +227,12 @@ export default function mustache(parser: Parser) {
 			type = 'AwaitBlock';
 		} else if (parser.eat('key')) {
 			type = 'KeyBlock';
+		} else if (parser.eat('slot')) {
+			type = 'SlotBlock';
 		} else {
 			parser.error({
 				code: 'expected-block-type',
-				message: 'Expected if, each, await or key'
+				message: 'Expected if, each, await, key or slot'
 			});
 		}
 

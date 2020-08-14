@@ -8,6 +8,8 @@ export function to_string(node: TemplateNode) {
 			return '{:then} block';
 		case 'ElseBlock':
 			return '{:else} block';
+		case 'SlotBlock':
+			return '{#slot} block';
 		case 'PendingBlock':
 		case 'AwaitBlock':
 			return '{#await} block';

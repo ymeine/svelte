@@ -5,6 +5,7 @@ import EachBlock from '../EachBlock';
 import Element from '../Element';
 import Head from '../Head';
 import IfBlock from '../IfBlock';
+import SlotBlock from '../SlotBlock';
 import InlineComponent from '../InlineComponent';
 import KeyBlock from '../KeyBlock';
 import MustacheTag from '../MustacheTag';
@@ -28,6 +29,7 @@ function get_constructor(type) {
 		case 'Element': return Element;
 		case 'Head': return Head;
 		case 'IfBlock': return IfBlock;
+		case 'SlotBlock': return SlotBlock;
 		case 'InlineComponent': return InlineComponent;
 		case 'KeyBlock': return KeyBlock;
 		case 'MustacheTag': return MustacheTag;

@@ -17,6 +17,7 @@ import EventHandler from './EventHandler';
 import Fragment from './Fragment';
 import Head from './Head';
 import IfBlock from './IfBlock';
+import SlotBlock from './SlotBlock';
 import InlineComponent from './InlineComponent';
 import KeyBlock from './KeyBlock';
 import Let from './Let';
@@ -50,6 +51,7 @@ export type INode = Action
 | Fragment
 | Head
 | IfBlock
+| SlotBlock
 | InlineComponent
 | KeyBlock
 | Let

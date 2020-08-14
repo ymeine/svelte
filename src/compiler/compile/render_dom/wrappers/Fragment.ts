@@ -7,6 +7,7 @@ import Element from './Element/index';
 import Head from './Head';
 import IfBlock from './IfBlock';
 import KeyBlock from './KeyBlock';
+import SlotBlock from './SlotBlock';
 import InlineComponent from './InlineComponent/index';
 import MustacheTag from './MustacheTag';
 import RawMustacheTag from './RawMustacheTag';
@@ -30,6 +31,7 @@ const wrappers = {
 	Element,
 	Head,
 	IfBlock,
+	SlotBlock,
 	InlineComponent,
 	KeyBlock,
 	MustacheTag,
